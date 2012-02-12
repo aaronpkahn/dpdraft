@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript">
+	function testajax(){
+		var userdata = {"user":{"name":"firstname!","email":"lastname!"}};
+		$.ajax({
+			type: 'Post',
+			url: '/testajax',
+			data: JSON.stringify(userdata),
+			contentType: 'application/json; charset=utf-8',
+			dataType: 'json',
+			success: function(msg) {
+				$("#span1").html(JSON.stringify(msg));
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				$("#span1").html(thrownError);
+			}
+		});
+	}
+	function trest(){
+		var sweet = {'coolio':'happyfilmore'};
+		$("#span1").html(JSON.stringify(sweet));
+	}
+</script>
+<form method="post" action="/testpost">
+	<span id="span1" class="grey">COOL !</span>
+     <input type="text" name="user[name]" />
+     <input type="text" name="user[email]" />
+     <input type="submit" value="Submit" />
+	  <input type="button" value="ajaxclix" onclick="testajax();" />
+ </form>
+</html>

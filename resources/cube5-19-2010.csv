@@ -1,0 +1,476 @@
+Name,Color,Type,Cost
+Force of Will,U,Interrupt,3UU
+Treachery,U,Enchant Creature,3UU
+Counterspell,U,Interrupt,UU
+Rite of Replication,U,Sorcery,2UU
+Essence Scatter,U,Instant,1U
+Sphinx of Jwar Isle,U,Creature — Sphinx,4UU
+Clone,U,Creature — Clone,3U
+Brainstorm,U,Instant,U
+Tinker,U,Sorcery,2U
+Time Warp,U,Sorcery,3UU
+Mind Control,U,Enchantment — Aura,3UU
+Serendib Efreet,U,Creature — Efreet,2U
+Control Magic,U,Enchant Creature,2UU
+Mulldrifter,U,Creature — Elemental,4U
+Mystical Tutor,U,Instant,U
+Tideforce Elemental,U,Creature — Elemental,2U
+Calcite Snapper,U,Creature — Turtle,1UU
+Cryptic Command,U,Instant,1UUU
+Morphling,U,Creature — Shapeshifter,3UU
+Arcane Denial (2),U,Interrupt,1U
+Man-o'-War,U,Creature — Creature,2U
+Thought Courier,U,Creature — Human Wizard,1U
+Pestermite,U,Creature — Faerie Rogue,2U
+Sphinx of Lost Truths,U,Creature — Sphinx,3UU
+Careful Consideration,U,Instant,2UU
+Glen Elendra Archmage,U,Creature — Faerie Wizard,3U
+Ponder,U,Sorcery,U
+Into the Roil,U,Instant,1U
+Nevermaker,U,Creature — Elemental,3U
+Thirst for Knowledge,U,Instant,2U
+Gifts Ungiven,U,Instant,3U
+Fact or Fiction,U,Instant,3U
+Sower of Temptation,U,Creature — Faerie Wizard,2UU
+Palinchron,U,Creature — Illusion,5UU
+Ninja of the Deep Hours,U,Creature — Human Ninja,3U
+Waterfront Bouncer,U,Creature — Spellshaper,1U
+Exclude,U,Instant,2U
+Jushi Apprentice,U,Creature — Human Wizard,1U
+Looter il-Kor,U,Creature — Kor Rogue,1U
+Body Double,U,Creature — Shapeshifter,4U
+"Venser, Shaper Savant",U,Legendary Creature — Human Wizard,2UU
+Bone Shredder,B,Creature — Minion,2B
+Dauthi Mercenary,B,Creature — Knight,2B
+Silent Specter,B,Creature — Specter,4BB
+Nezumi Shortfang,B,Creature — Rat Rogue,1B
+Bane of the Living,B,Creature — Insect,2BB
+"Ink-Eyes, Servant of Oni",B,Legendary Creature — Rat Ninja,4BB
+Vampire Lacerator,B,Creature — Vampire Warrior,B
+Beacon of Unrest,B,Sorcery,3BB
+Dread Return,B,Sorcery,2BB
+Corrupted Zendikon,B,Enchantment — Aura,1B
+Mind Twist,B,Sorcery,XB
+Black Knight,B,Creature — Knight,BB
+Disfigure,B,Instant,B
+Bitterblossom,B,Tribal Enchantment — Faerie,1B
+Shriekmaw,B,Creature — Elemental,4B
+Duress,B,Sorcery,B
+Makeshift Mannequin,B,Instant,3B
+Exhume,B,Sorcery,1B
+Hymn to Tourach (1),B,Sorcery,BB
+Royal Assassin,B,Creature — Assassin,1BB
+Sign in Blood,B,Sorcery,BB
+Dark Ritual,B,Interrupt,B
+Diabolic Edict,B,Instant,1B
+Doom Blade,B,Instant,1B
+Nightscape Familiar,B,Creature — Zombie,1B
+Vampire Hexmage,B,Creature — Vampire Shaman,BB
+Animate Dead,B,Enchant Dead Creature,1B
+Hideous End,B,Instant,1BB
+"Ob Nixilis, the Fallen",B,Legendary Creature — Demon,3BB
+Vampire Nighthawk,B,Creature — Vampire Shaman,1BB
+Hypnotic Specter,B,Creature — Specter,1BB
+Chainer's Edict,B,Sorcery,1B
+Stinkweed Imp,B,Creature — Imp,2B
+Necromancy,B,Enchantment,2B
+Demonic Tutor,B,Sorcery,1B
+Flametongue Kavu,R,Creature — Kavu,3R
+Blistering Firecat,R,Creature — Cat,1RRR
+Sulfur Elemental,R,Creature — Elemental,2R
+"Akroma, Angel of Fury",R,Legendary Creature — Angel,5RRR
+Magma Jet,R,Instant,1R
+Genju of the Spires,R,Enchant Mountain,R
+Heat Shimmer,R,Sorcery,2R
+Keldon Marauders,R,Creature — Human Warrior,1R
+Viashino Heretic,R,Creature — Viashino,2R
+"Kiki-Jiki, Mirror Breaker",R,Legendary Creature — Goblin Shaman,2RRR
+Char,R,Instant,2R
+Disintegrate,R,Sorcery,XR
+Hissing Iguanar,R,Creature — Lizard,2R
+Avalanche Riders,R,Creature — Nomads,3R
+Keldon Champion,R,Creature — Barbarian,2RR
+Rakka Mar,R,Legendary Creature — Human Shaman,2RR
+Blood Knight,R,Creature — Human Knight,RR
+Incinerate,R,Instant,1R
+Kird Ape,R,Creature — Ape,R
+Fork,R,Interrupt,RR
+Goblin Ruinblaster,R,Creature — Goblin Shaman,2R
+Lightning Bolt,R,Instant,R
+Lightning Blast,R,Instant,3R
+Comet Storm,R,Instant,XRR
+Obsidian Fireheart,R,Creature — Elemental,1RRR
+Jackal Pup,R,Creature — Hound,R
+Earthquake,R,Sorcery,XR
+Plated Geopede,R,Creature — Insect,1R
+Chandra Nalaar,R,Planeswalker — Chandra,3RR
+Siege-Gang Commander,R,Creature — Goblin,3RR
+Dwarven Blastminer,R,Creature — Dwarf,1R
+Ball Lightning,R,Creature — Ball Lightning,RRR
+Pyroclasm,R,Sorcery,1R
+Chain Lightning,R,Sorcery,R
+"Jaya Ballard, Task Mage",R,Legendary Creature — Human Spellshaper,1RR
+Burst Lightning,R,Instant,R
+Puncture Blast,R,Instant,2R
+Goblin Guide,R,Creature — Goblin Scout,R
+Volcanic Fallout,R,Instant,1RR
+Hellspark Elemental,R,Creature — Elemental,1R
+Bogardan Hellkite,R,Creature — Dragon,6RR
+Pouncing Jaguar,G,Creature — Cat,G
+Viridian Shaman,G,Creature — Elf Shaman,2G
+Blastoderm,G,Creature — Beast,2GG
+Wild Mongrel,G,Creature — Hound,1G
+Elephant Guide,G,Enchant Creature,2G
+Yavimaya Elder,G,Creature — Druid,1GG
+Hidden Gibbons,G,Enchantment,G
+Rancor,G,Enchant Creature,G
+Wickerbough Elder,G,Creature — Treefolk Shaman,3G
+Terra Stomper,G,Creature — Beast,3GGG
+Llanowar Elves,G,Creature — Elves,G
+Call of the Herd,G,Sorcery,2G
+Albino Troll,G,Creature — Troll,1G
+Iwamori of the Open Fist,G,Legendary Creature — Human Monk,2GG
+Briarhorn,G,Creature — Elemental,3G
+Cloudthresher,G,Creature — Elemental,2GGGG
+Lotus Cobra,G,Creature — Snake,1G
+Lignify,G,Tribal Enchantment — Treefolk Aura,1G
+Scute Mob,G,Creature — Insect,G
+Wild Nacatl,G,Creature — Cat Warrior,G
+Twinblade Slasher,G,Creature — Elf Warrior,G
+Imperious Perfect,G,Creature — Elf Warrior,2G
+Regrowth,G,Sorcery,1G
+River Boa,G,Creature — Snake,1G
+Sakura-Tribe Elder,G,Creature — Snake Shaman,1G
+Troll Ascetic,G,Creature — Troll Shaman,1GG
+Harrow,G,Instant,2G
+Garruk Wildspeaker,G,Planeswalker — Garruk,2GG
+Rampaging Baloths,G,Creature — Beast,4GG
+Rampant Growth,G,Sorcery,1G
+Thornling,G,Creature — Elemental Shaman,3GG
+Krosan Grip,G,Instant,2G
+Ohran Viper,G,Snow Creature — Snake,1GG
+"Omnath, Locus of Mana",G,Legendary Creature — Elemental,2G
+Harmonize,G,Sorcery,2GG
+Wolfbriar Elemental,G,Creature — Elemental,2GG
+Vines of Vastwood,G,Instant,G
+Ant Queen,G,Creature — Insect,3GG
+Acidic Slime,G,Creature — Ooze,3GG
+Great Sable Stag,G,Creature — Elk,1GG
+Chameleon Colossus,G,Creature — Shapeshifter,2GG
+Harm's Way,W,Instant,W
+Mistmeadow Skulk,W,Creature — Kithkin Rogue,1W
+Hallowed Burial,W,Sorcery,3WW
+Elite Vanguard,W,Creature — Human Soldier,W
+Path to Exile,W,Instant,W
+Captain of the Watch,W,Creature — Human Soldier,4WW
+Steppe Lynx,W,Creature — Cat,W
+Sacred Mesa,W,Enchantment,2W
+Martial Coup,W,Sorcery,XWW
+Silver Knight,W,Creature — Knight,WW
+Journey to Nowhere,W,Enchantment,1W
+White Knight,W,Creature — Knight,WW
+Honor of the Pure,W,Enchantment,1W
+Spectral Procession,W,Sorcery,(2/W)(2/W)(2/W)
+Disenchant,W,Instant,1W
+Swords to Plowshares,W,Instant,W
+Balance,W,Sorcery,1W
+Youthful Knight,W,Creature — Knight,1W
+Savannah Lions,W,Creature — Lions,W
+Mother of Runes,W,Creature — Cleric,W
+Prison Term,W,Enchantment — Aura,1WW
+Loam Lion,W,Creature — Cat,W
+Cloudgoat Ranger,W,Creature — Giant Warrior,3WW
+Wrath of God,W,Sorcery,2WW
+Sigiled Paladin,W,Creature — Human Knight,WW
+"Isamaru, Hound of Konda",W,Legendary Creature — Hound,W
+Kor Skyfisher,W,Creature — Kor Soldier,1W
+Reveillark,W,Creature — Elemental,4W
+Day of Judgment,W,Sorcery,2WW
+Spectral Lynx,W,Creature — Cat,1W
+Kor Sanctifiers,W,Creature — Kor Cleric,2W
+Dust to Dust,W,Sorcery,1WW
+Paladin en-Vec,W,Creature — Knight,1WW
+Battlegrace Angel,W,Creature — Angel,3WW
+Serra Angel,W,Creature — Angel,3WW
+Armageddon,W,Sorcery,3W
+Emeria Angel,W,Creature — Angel,2WW
+Knight of Meadowgrain,W,Creature — Kithkin Knight,WW
+Oblivion Ring,W,Enchantment,2W
+Conqueror's Pledge,W,Sorcery,2WWW
+Duplicant,A,Artifact Creature — Shapeshifter,6
+Aether Vial,A,Artifact,1
+Puppet Strings,A,Artifact,3
+Crystal Shard,A,Artifact,3
+Prismatic Lens,A,Artifact,2
+Coalition Relic,A,Artifact,3
+Juggernaut,A,Artifact Creature,4
+Dimir Signet,A,Artifact,2
+Azorius Signet,A,Artifact,2
+Candelabra of Tawnos,A,Mono Artifact,1
+Rakdos Signet,A,Artifact,2
+Mana Vault,A,Mono Artifact,1
+Boros Signet,A,Artifact,2
+Platinum Angel,A,Artifact Creature — Angel,7
+Sol Ring,A,Mono Artifact,1
+Grafted Wargear,A,Artifact — Equipment,3
+Darksteel Colossus,A,Artifact Creature,11
+Skullclamp,A,Artifact — Equipment,1
+Chaos Orb,A,Mono Artifact,2
+Nevinyrral's Disk,A,Mono Artifact,4
+Simic Signet,A,Artifact,2
+Loxodon Warhammer,A,Artifact — Equipment,3
+Izzet Signet,A,Artifact,2
+Orzhov Signet,A,Artifact,2
+Golgari Signet,A,Artifact,2
+Obelisk of Alara,A,Artifact,6
+Masticore,A,Artifact Creature,4
+Selesnya Signet,A,Artifact,2
+Isochron Scepter,A,Artifact,2
+Gruul Signet,A,Artifact,2
+Pilgrim's Eye,A,Artifact Creature — Thopter,3
+"Uril, the Miststalker",M,Legendary Creature — Beast,2RGW
+Bant Charm,M,Instant,GWU
+Crystallization,M,Enchantment — Aura,(G/U)W
+Lavalanche,M,Sorcery,XBRG
+"Karrthus, Tyrant of Jund",M,Legendary Creature — Dragon,4BRG
+Slave of Bolas,M,Sorcery,3(U/R)B
+Snakeform,M,Instant,2(G/U)
+Lorescale Coatl,M,Creature — Snake,1GU
+Firespout,M,Sorcery,2(R/G)
+Vithian Renegades,M,Creature — Human Shaman,1RG
+Bloodbraid Elf,M,Creature — Elf Berserker,2RG
+Tattermunge Maniac,M,Creature — Goblin Warrior,(R/G)
+Oversoul of Dusk,M,Creature — Spirit Avatar,(G/W)(G/W)(G/W)(G/W)(G/W)
+Kitchen Finks,M,Creature — Ouphe,1(G/W)(G/W)
+Enlisted Wurm,M,Creature — Wurm,4GW
+Behemoth Sledge,M,Artifact — Equipment,1GW
+Gaddock Teeg,M,Legendary Creature — Kithkin Advisor,GW
+Qasali Pridemage,M,Creature — Cat Wizard,GW
+Nemesis of Reason,M,Creature — Leviathan Horror,3UB
+Agony Warp,M,Instant,UB
+"Oona, Queen of the Fae",M,Legendary Creature — Faerie Wizard,3(U/B)(U/B)(U/B)
+Soul Manipulation,M,Instant,1UB
+Unmake,M,Instant,(W/B)(W/B)(W/B)
+Blightning,M,Sorcery,1BR
+Bituminous Blast,M,Instant,3BR
+Terminate,M,Instant,BR
+Lightning Reaver,M,Creature — Zombie Beast,3BR
+Mistmeadow Witch,M,Creature — Kithkin Wizard,1(W/U)
+Wall of Denial,M,Creature — Wall,1WU
+Plumeveil,M,Creature — Elemental,(W/U)(W/U)(W/U)
+Figure of Destiny,M,Creature — Kithkin,(R/W)
+Bull Cerodon,M,Creature — Beast,4RW
+Spitemare,M,Creature — Elemental,2(R/W)(R/W)
+Stun Sniper,M,Creature — Human Archer,RW
+Putrid Leech,M,Creature — Zombie Leech,BG
+Graypelt Refuge,L,Land,
+Savannah,L,Land,
+Underground Sea,L,Land,
+Sunken Ruins,L,Land,
+Jwar Isle Refuge,L,Land,
+Creeping Tar Pit,L,Land,
+Akoum Refuge,L,Land,
+Lavaclaw Reaches,L,Land,
+Plateau,L,Land,
+Rugged Prairie,L,Land,
+Marsh Flats,L,Land,
+Scrubland,L,Land,
+Bayou,L,Land,
+Verdant Catacombs,L,Land,
+Misty Rainforest,L,Land,
+Tropical Island,L,Land,
+Tundra,L,Land,
+Sejiri Refuge,L,Land,
+Celestial Colonnade,L,Land,
+Glacial Fortress,L,Land,
+Kazandu Refuge,L,Land,
+Taiga,L,Land,
+Rootbound Crag,L,Land,
+Scalding Tarn,L,Land,
+Vivid Crag,L,Land,
+Vivid Meadow,L,Land,
+Vivid Creek,L,Land,
+Vivid Marsh,L,Land,
+Vivid Grove,L,Land,
+Seaside Citadel,L,Land,
+Jungle Shrine,L,Land,
+Savage Lands,L,Land,
+Crumbling Necropolis,L,Land,
+Gargoyle Castle,L,Land,
+Lotus Vale,L,Land,
+Mutavault,L,Land,
+Halimar Depths,L,Land,
+Windbrisk Heights,L,Land,
+Strip Mine,L,Land,
+Reflecting Pool,L,Land,
+City of Brass,L,Land,
+Terramorphic Expanse,L,Land,
+Maze of Ith,L,Land,
+Terror,B,Instant,1B
+Fire/Ice,M,Instant,1R/1U
+Izzet Guildmage,M,Creature — Human Wizard,(U/R)(U/R)
+Gelectrode,M,Creature — Weird,1UR
+Spectral Force,G,Creature — Elemental Spirit,3GG
+"Kumano, Master Yamabushi",R,Legendary Creature — Human Shaman,3RR
+Mogg Fanatic,R,Creature — Goblin,R
+Soltari Priest,W,Creature — Cleric,WW
+Genesis,G,Creature — Incarnation,4G
+"Squee, Goblin Nabob",R,Creature — Goblin Legend,2R
+Phantom Centaur,G,Creature — Centaur Spirit,2GG
+Profane Command,B,Sorcery,XBB
+Soltari Monk,W,Creature — Cleric,WW
+Incendiary Command,R,Sorcery,3RR
+Sensei's Divining Top,A,Artifact,1
+Scroll Rack,A,Artifact,2
+"Jace, the Mind Sculptor",U,Planeswalker — Jace,2UU
+Sudden Shock,R,Instant,1R
+Calciderm,W,Creature — Beast,2WW
+Mirri the Cursed,B,Legendary Creature — Vampire Cat,2BB
+Nantuko Shade,B,Creature — Insect Shade,BB
+Mana Leak,U,Instant,1U
+Deranged Hermit,G,Creature — Elf,3GG
+Darksteel Ingot,A,Artifact,3
+Sword of Fire and Ice,A,Artifact — Equipment,3
+Erratic Portal,A,Artifact,4
+Phyrexian Processor,A,Artifact,4
+Fireblast,R,Instant,4RR
+Powder Keg,A,Artifact,2
+Skyshroud Elite,G,Creature — Elves,G
+Viridian Zealot,G,Creature — Elf Warrior,GG
+Night's Whisper,B,Sorcery,1B
+Rout,W,Sorcery,3WW
+Tooth and Nail,G,Sorcery,5GG
+Primal Command,G,Sorcery,3GG
+Squall Line,G,Instant,XGG
+Plague Sliver,B,Creature — Sliver,2BB
+Momentary Blink,W,Instant,1W
+Greater Gargadon,R,Creature — Beast,9R
+Simic Sky Swallower,M,Creature — Leviathan,5GU
+Azorius Chancery,L,Land,
+Rakdos Carnarium,L,Land,
+Simic Growth Chamber,L,Land,
+Repeal,U,Instant,XU
+Orzhov Basilica,L,Land,
+Mortify,M,Instant,1WB
+Gruul Turf,L,Land,
+Izzet Boilerworks,L,Land,
+Burning-Tree Shaman,M,Creature — Centaur Shaman,1RG
+Selesnya Sanctuary,L,Land,
+Golgari Rot Farm,L,Land,
+Sulfuric Vortex,R,Enchantment,1RR
+Meloku the Clouded Mirror,U,Legendary Creature — Moonfolk Wizard,4U
+Farseek,G,Sorcery,1G
+Dimir Guildmage,M,Creature — Human Wizard,(U/B)(U/B)
+Dimir Aqueduct,L,Land,
+Bonesplitter,A,Artifact — Equipment,1
+Rorix Bladewing,R,Creature — Dragon Legend,3RRR
+Psychatog,M,Creature — Atog,1UB
+Carnophage,B,Creature — Zombie,B
+Innocent Blood,B,Sorcery,B
+Phyrexian Scuta,B,Creature — Zombie,3B
+Goblin Patrol,R,Creature — Goblins,R
+Gilded Drake,U,Creature — Drake,1U
+Crater Hellion,R,Creature — Beast,4RR
+Capsize,U,Instant,1UU
+Austere Command,W,Sorcery,4WW
+Mirror Entity,W,Creature — Shapeshifter,2W
+Boggart Ram-Gang,M,Creature — Goblin Warrior,(R/G)(R/G)(R/G)
+Pillage,R,Sorcery,1RR
+Nekrataal,B,Creature — Nekrataal,2BB
+Phyrexian Arena,B,Enchantment,1BB
+Bribery,U,Sorcery,3UU
+Plow Under,G,Sorcery,3GG
+Razormane Masticore,A,Artifact Creature,5
+Basking Rootwalla,G,Creature — Lizard,G
+Boros Garrison,L,Land,
+Spiritmonger,M,Creature — Beast,3BG
+"Kira, Great Glass-Spinner",U,Legendary Creature — Spirit,1UU
+Ogre Marauder,B,Creature — Ogre Warrior,1BB
+Skeletal Vampire,B,Creature — Vampire Skeleton,4BB
+Bloodghast,B,Creature — Vampire Spirit,BB
+Entomb,B,Instant,B
+Kjeldoran Outpost,L,Land,
+Thawing Glaciers,L,Land,
+Serra Avenger,W,Creature — Angel,WW
+Murderous Redcap,M,Creature — Goblin Assassin,2(B/R)(B/R)
+Wheel of Fortune,R,Sorcery,2R
+Mox Diamond,A,Artifact,0
+Lotus Petal,A,Artifact,0
+Psionic Blast,U,Instant,2U
+Badlands,L,Land,
+Wall of Blossoms,G,Creature — Wall,1G
+Smash to Smithereens,R,Instant,1R
+Wild Ricochet,R,Instant,2RR
+Rolling Thunder,R,Sorcery,XRR
+Hellkite Charger,R,Creature — Dragon,4RR
+Fireball,R,Sorcery,XR
+Prophetic Bolt,M,Instant,3UR
+Eternal Witness,G,Creature — Human Shaman,1GG
+Mark of Eviction,U,Enchantment — Aura,U
+Faith's Fetters,W,Enchantment — Aura,3W
+Celestial Crusader,W,Creature — Spirit,2WW
+Wake Thrasher,U,Creature — Merfolk Soldier,2U
+Blade of the Sixth Pride,W,Creature — Cat Rebel,1W
+Land Tax,W,Enchantment,W
+"Akroma, Angel of Wrath",W,Creature — Angel Legend,5WWW
+Karmic Guide,W,Creature — Spirit,3WW
+Exalted Angel,W,Creature — Angel,4WW
+Stonecloaker,W,Creature — Gargoyle,2W
+Deep Analysis,U,Sorcery,3U
+Snuff Out,B,Instant,3B
+Abyssal Persecutor,B,Creature — Demon,2BB
+Dusk Urchins,B,Creature — Ouphe,2B
+Jace Beleren,U,Planeswalker — Jace,1UU
+Wasteland,L,Land,
+Vesuvan Doppelganger,U,Creature — Doppelganger,3UU
+Stormbind,M,Enchantment,1RG
+Liliana Vess,B,Planeswalker — Liliana,3BB
+Umezawa's Jitte,A,Legendary Artifact — Equipment,2
+Silent Arbiter,A,Artifact Creature,4
+Krosan Tusker,G,Creature — Beast,5GG
+Lightning Greaves,A,Artifact — Equipment,2
+Tangle Wire,A,Artifact,3
+Thran Dynamo,A,Artifact,4
+Joiner Adept,G,Creature — Elf Druid,1G
+Farhaven Elf,G,Creature — Elf Druid,2G
+Woodfall Primus,G,Creature — Treefolk Shaman,5GGG
+Oona's Prowler,B,Creature — Faerie Rogue,1B
+Dauthi Marauder,B,Creature — Minion,2B
+Dauthi Horror,B,Creature — Beast,1B
+Sarcomancy,B,Enchantment,B
+Aftershock,R,Sorcery,2RR
+Ancestral Vision,U,Sorcery,
+Dismiss,U,Interrupt,2UU
+Miscalculation,U,Interrupt,1U
+Force Spike,U,Interrupt,U
+Absorb,M,Instant,WUU
+Pernicious Deed,M,Enchantment,1BG
+Grand Arbiter Augustin IV,M,Legendary Creature — Human Advisor,2WU
+Putrefy,M,Instant,1BG
+Recurring Nightmare,B,Enchantment,2B
+Mystic Crusader,W,Creature — Nomad Mystic,1WW
+Parallax Wave,W,Enchantment,2WW
+Enlightened Tutor,W,Instant,W
+Griffin Guide,W,Enchantment — Aura,2W
+Solemn Simulacrum,A,Artifact Creature,4
+Molten Rain,R,Sorcery,1RR
+Keldon Vandals,R,Creature — Townsfolk,2R
+Wildfire,R,Sorcery,4RR
+Mire Boa,G,Creature — Snake,1G
+Life from the Loam,G,Sorcery,1G
+Indrik Stomphowler,G,Creature — Beast,4G
+Mana Drain,U,Interrupt,UU
+Library of Alexandria,L,Land,
+Berserk,G,Instant,G
+Survival of the Fittest,G,Enchantment,1G
+Sarkhan Vol,M,Planeswalker — Sarkhan,2RG
+Broodmate Dragon,M,Creature — Dragon,3BRG
+Ajani Vengeant,M,Planeswalker — Ajani,2RW
+Rafiq of the Many,M,Legendary Creature — Human Knight,1GWU
+Vampiric Tutor,B,Instant,B
+Damnation,B,Sorcery,2BB
+Evolving Wilds,L,Land,
+Arcane Sanctum,L,Land,
+"Elspeth, Knight-Errant",W,Planeswalker — Elspeth,2WW
+Enclave Cryptologist,U,Creature — Merfolk Wizard,U
+Staggershock,R,Instant,2R
