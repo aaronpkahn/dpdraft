@@ -1,4 +1,4 @@
-var cardList = require("./cardList.js").cardList;
+var cardList = require("./public/js/cardList.js").cardList;
 var packsize = 14;
 var packcount = 3;
 
@@ -9,9 +9,7 @@ var draft = {
 		var playercount = this.players.length;
 		if(playercount === 0)
 		{
-			//console.log("before:"+cardList[0].Name);
 			makePacks(this.packs);
-			//console.log("after:"+cardList[0].Name);
 		}
 		var ip = request.connection.remoteAddress;
 		if(typeof this.players[ip] === 'undefined' 
