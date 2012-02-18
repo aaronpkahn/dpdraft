@@ -1,9 +1,12 @@
 Players
 <br />
 {{each players}}
-<div>${name} - ${ip}:
-	{{each(i, val) drafts}}
-		${val}
-	{{/each}}
- </div>
+<div>${id}-${ip}:${name}</div>
 {{/each}}
+
+<!--
+//example with index and val, braces removed:
+each(i, val) drafts
+		$val
+/each
+-->

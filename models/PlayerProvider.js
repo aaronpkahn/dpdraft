@@ -1,4 +1,4 @@
-var playerCounter = 1;
+var GUID = require('./Algorithms.js').GUID;
 
 PlayerProvider = function(){};
 PlayerProvider.prototype.dummyData = [];
@@ -39,11 +39,11 @@ PlayerProvider.prototype.save = function(Players, callback) {
     if(this.findByName(Player.name) != null){
 		error = {msg:'This name is already taken'};
 	 } else {
-		 Player._id = playerCounter++;
-		 Player.created = new Date();
-		 this.dummyData[this.dummyData.length]= Player;
+		Player._id = GUID(); //TODO: Fix GUID generation
+		Player.created = new Date();
+		this.dummyData[this.dummyData.length]= Player;
 	 }
-	 
+ 
     // if( Player.comments === undefined )
     // 	Player.comments = [];
 		// for(var j =0;j< Player.comments.length; j++) {
@@ -53,11 +53,12 @@ PlayerProvider.prototype.save = function(Players, callback) {
   callback(error, Players);
 };
 
-/* Lets bootstrap with dummy data */
+/* dummy data */
+/*
 new PlayerProvider().save([
   {name: 'Jimmy', ip: 'testip1', drafts: ['one','two']},
   {name: 'Bob', ip: 'testip2'},
   {name: 'Penismightier', ip: 'testip3'}
 ], function(error, Players){});
-
+*/
 exports.PlayerProvider = PlayerProvider;

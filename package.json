@@ -1,5 +1,5 @@
 {
-    "name": "DPDraft"
+    "name": "dpdraft"
   , "author": "renobeguh <renobeguh@gmail.com>"
   , "contributors": [
         { "name": "kouri", "email": "kourir@gmail.com" }
@@ -7,8 +7,9 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "express": ">=2.5.6"
-	 , "jqtpl": ">=1.0.9"
-	 , "mongodb": ">=0.9.8-7"
+      "express"	: ">=2.5.6"
+	 , "jqtpl"		: ">=1.0.9"
+	 , "mongodb"	: ">=0.9.8-7"
+	 , "socket.io"	: ">=0.8.7"
   }
 }
