@@ -1,0 +1,9 @@
+Players
+<br />
+{{each players}}
+<div>${name} - ${ip}:
+	{{each(i, val) drafts}}
+		${val}
+	{{/each}}
+ </div>
+{{/each}}

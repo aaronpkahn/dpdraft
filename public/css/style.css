@@ -1,0 +1,10 @@
+body{
+	font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+	font-size: 13px;
+	text-align: center;
+}
+#container {
+	text-align: left;
+}
+.error{ color:red; }
+.grey{ color:#555555; font-weight:bold;}

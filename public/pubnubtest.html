@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DPDraft</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+Enter Chat and press enter
+<div><input id="chatinput" placeholder="you-chat-here" /></div>
+ 
+Chat Output
+<div id="chatoutput"></div>
+ 
+<div id="pubnub" pub-key="pub-fe7569d9-aee2-4032-b19a-3353d2d990f2" sub-key="sub-58c1660c-56da-11e1-b76a-510fa62ce2cd"></div>
+<script src=http://cdn.pubnub.com/pubnub-3.1.min.js></script>
+<script src='/public/js/pubnub.js'></script>
+<script src='/public/js/carList.js'></script>
+<script>
+(function(){
+	StartChat('chatinput','chatoutput');
+})();
+</script>
+</body>
+</html>
