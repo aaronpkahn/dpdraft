@@ -1,4 +1,4 @@
-var GUID = require('./Algorithms.js').GUID;
+//var GUID = require('./Algorithms.js').GUID;
 
 PlayerProvider = function(){};
 PlayerProvider.prototype.dummyData = [];
@@ -39,7 +39,7 @@ PlayerProvider.prototype.save = function(Players, callback) {
     if(this.findByName(Player.name) != null){
 		error = {msg:'This name is already taken'};
 	 } else {
-		Player._id = GUID(); //TODO: Fix GUID generation
+		Player._id = 1; //GUID(); //TODO: Fix GUID generation
 		Player.created = new Date();
 		this.dummyData[this.dummyData.length]= Player;
 	 }

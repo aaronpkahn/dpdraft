@@ -2,7 +2,7 @@
     "name": "dpdraft"
   , "author": "renobeguh <renobeguh@gmail.com>"
   , "contributors": [
-        { "name": "kouri", "email": "kourir@gmail.com" }
+        { "name": "kouri", "email": "kouri@kouri.org" }
 	 ] 
   , "version": "0.0.1"
   , "private": true
