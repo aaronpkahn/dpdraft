@@ -35,6 +35,7 @@ app.post('/', function(req, res) {
 			// }
 		}
 	);
+	res.render('players',{'players': [ {name: 'me', id: 1}, {name: 'test', id:2} ]});
 });
 
 app.get('/getPlayers', function(req, res){
@@ -44,7 +45,7 @@ app.get('/getPlayers', function(req, res){
 });
 
 if(!module.parent) { //for testing
-	app.listen(80);
+	app.listen(8080);
 }
 console.log('dpdraft up and running on port %s', app.address().port);
 

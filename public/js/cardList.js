@@ -1,4 +1,4 @@
-var cardList = [
+exports.cardList = [
 	{
 		"Name": "Force of Will",
 		"Color": "U",
@@ -2850,5 +2850,3 @@ var cardList = [
 		"Cost": "2R"
 	}
 ]
-
-exports.cardList = cardList;
