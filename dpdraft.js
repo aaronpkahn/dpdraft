@@ -41,7 +41,7 @@ var server = dnode(function(player, conn) {
 			if(c.command in commands)
 			{
 				commands[c.command](c.args,function(result,error){
-					if(error){ player.log(error);}
+					if(error){ player.raiseError(error);}
 					else { player.log(result);}
 				});
 			} else {
