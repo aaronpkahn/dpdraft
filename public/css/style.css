@@ -3,8 +3,18 @@ body{
 	font-size: 13px;
 	text-align: center;
 }
+
 #container {
 	text-align: left;
+	width:300px;
+	margin: 0px auto -1px auto
 }
-.error{ color:red; }
-.grey{ color:#555555; font-weight:bold;}
+#name, #chatinput {
+	width: 300px;
+}
+#log {
+	font-size: 1em; 
+	font-family: monaco, monospace;
+}
+.error { color:red; }
+.logmsg{ color:#666666; font-weight:bold;}
