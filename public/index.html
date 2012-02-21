@@ -75,12 +75,29 @@ $(document).ready(function () {
 			}); //just a callback
 		}
 	});
+	var inputBuffer = [];
+	var currentIndex = -1;
 	$('#chatinput').keydown(function(e) {
-		if((e.keyCode || e.charCode) === 13) {
+		if((e.keyCode || e.charCode) === 38) {
+			//up
+			if(inputBuffer.length-1>currentIndex){
+				$('#chatinput').val(inputBuffer[++currentIndex]);
+			}
+		} else if((e.keyCode || e.charCode) === 40) {
+			//down
+			if(currentIndex>0){
+				$('#chatinput').val(inputBuffer[--currentIndex]);
+			}
+		}
+		else if((e.keyCode || e.charCode) === 13) {
+			//enter
+			currentindex = -1;
+			inputBuffer.splice(0,0, $('#chatinput').val());
 			server.say($('#chatinput').val()); //no callback
 			$('#chatinput').val('');
 		}
 	});
+	
 });
 </script>
 </html>

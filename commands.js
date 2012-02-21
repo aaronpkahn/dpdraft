@@ -1,12 +1,17 @@
 exports.commands = {
-	draft		: function(args,cb) {
+	sweet		: function(cb) {
+		cb('sweet exectued');
+	}
+	,draft	: function(cb,args) {
 		if(args.length > 0) {
 			cb('draft '+args[0]+' created');
 		} else {
 			cb('','draft command requires a name parameter');
 		}
 	}
-	, sweet	: function(args,cb) {
-		cb('sweet exectued');
+	,pen15	: function(cb,args,players) {
+		for(p in players){
+			players[p].log('<marquee behavior=scroll direction=right>8====D '+args.join(' ')+'</marquee>');
+		}
 	}
 };

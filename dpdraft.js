@@ -19,6 +19,16 @@ var algo = require('./algorithms');
 var server = dnode(function(player, conn) {
 	//conn.on('ready', function() {
 	//});
+	conn.on('end', function () {
+		if(player.name && player.name in players) {
+			var disconnectText = player.name + ' disconnected';
+			console.log(conn.id+': '+disconnectText);
+			delete players[player.name]
+			for(p in players) {
+				players[p].log(disconnectText);
+			}
+		}
+	});
 	this.login = function(name,cb) {
 		if(name in players) {
 			cb(name+' is taken, enter new name');
@@ -26,7 +36,7 @@ var server = dnode(function(player, conn) {
 		}
 		player.name = name;
 		var connectionText = player.name+' connected';
-		console.log(connectionText);
+		console.log(conn.id+': '+connectionText);
 		for(p in players) {
 			players[p].log(connectionText);
 		}
@@ -40,10 +50,10 @@ var server = dnode(function(player, conn) {
 			var c = algo.parseCommand(text);
 			if(c.command in commands)
 			{
-				commands[c.command](c.args,function(result,error){
+				commands[c.command](function(result,error){
 					if(error){ player.raiseError(error);}
 					else { player.log(result);}
-				});
+				},c.args,players);
 			} else {
 				player.raiseError('command '+c.command+' not recognized');
 			}
