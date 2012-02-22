@@ -101,10 +101,17 @@ $(document).ready(function () {
 			//enter
 			currentindex = -1;
 			inputBuffer.splice(0,0, $('#chatinput').val());
-			server.say($('#chatinput').val()); //no callback
+			server.say(fixStr($('#chatinput').val())); //no callback
 			$('#chatinput').val('');
 		}
 	});
+	function fixStr(str){
+		var retStr = str.replace(/google/i, 'bing');
+		retStr = retStr.replace(/apple/i, 'google');
+		retStr = retStr.replace(/microsoft/i, 'm$');
+		retStr = retStr.replace(/lol/i, '101');		
+		return retStr;
+	}
 	
 });
 </script>
