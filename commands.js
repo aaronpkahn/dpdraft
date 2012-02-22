@@ -1,6 +1,6 @@
 exports.commands = {
 	sweet		: function(cb) {
-		cb('sweet exectued');
+		cb('sweet exectued *sp');
 	}
 	,draft	: function(cb,args) {
 		if(args.length > 0) {

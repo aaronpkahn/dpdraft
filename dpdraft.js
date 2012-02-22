@@ -64,6 +64,7 @@ var server = dnode(function(player, conn) {
 			}
 		}
 	};
+	
 });
 server.listen(app);
 // You can pass options through to socket.io with the io parameter:
