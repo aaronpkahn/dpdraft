@@ -17,8 +17,8 @@ var dnode = require('dnode');
 var commands = require('./commands').commands;
 var algo = require('./algorithms');
 var server = dnode(function(player, conn) {
-	//conn.on('ready', function() {
-	//});
+	// conn.on('ready', function() {
+	// });
 	conn.on('end', function () {
 		if(player.name && player.name in players) {
 			var disconnectText = player.name + ' disconnected';

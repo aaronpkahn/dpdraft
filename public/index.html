@@ -45,9 +45,15 @@ $(document).ready(function () {
 	}).connect(function (s) {
 		server = s;
 		client = this;
+		showLogin();
+	});
+	
+	function showLogin() {
 		$('#loading').hide();
 		$('#login').show();
-	});
+		$('#chat').hide();
+		$('#name').val('');
+	}
 	
 	function showLoginError(msg){
 		$('#loading').hide();
@@ -58,16 +64,18 @@ $(document).ready(function () {
 	
 	$('#name').keydown(function(e) {
 		if((e.keyCode || e.charCode) === 13 && $('#name').val()) {
-			if($('#name').val().indexOf(' ') >=0 ) {
+			var name = $('#name').val();
+			if(name.indexOf(' ') >=0 ) {
 				showLoginError('enter a name without spaces');
 				return;
 			}
 			$('#login').hide();
 			$('#loading').show();
-			server.login($('#name').val(),function(error){
+			server.login(name,function(error){
 				if(error){
 					showLoginError(error);
 				} else {
+					client.name = name;
 					$('#loading').hide();
 					$('#chat').show();
 					$('#chatinput').focus();

@@ -1,39 +1,25 @@
 var cardList = require("./public/js/cardList.js").cardList;
-var packsize = 14;
-var packcount = 3;
 
-var draft = {
-	players: [],
-	packs: [],
-	joinDraft: function(request, response) {
-		var playercount = this.players.length;
-		if(playercount === 0)
-		{
-			makePacks(this.packs);
-		}
-		var ip = request.connection.remoteAddress;
-		if(typeof this.players[ip] === 'undefined' 
-			|| this.players[ip] === null)
-		{
-			this.players[ip] = this.players.length;
-			response.writeHead(200, {"Content-Type": "text/plain"});
-			response.write("Welcome to the draft, may i call you: "+ip+"\n\n");
-			response.write("\tName\tColor\tType\tCost\n");
-			for(var i = 0; i < packcount; i+=1)
+var draft = function(n, p, s, c){
+	this.name = n;
+	this.players = p;
+	this.packs = [];
+	//assign packs
+	this.assignpacks = function(packsize,packcount){
+		//makePacks(//TODO: aaron you are here
+		for(k in this.players) {
+			this.players.packs = [];
+			for(var i = 0; i < packcount; i+=1) {
+				this.player.packs.push(
 				for(var j = 0; j < packsize; j+=1)
 				{
 					var card = this.packs[i*playercount][j];
-				//for(card in this.packs[i*playercount])
-					response.write("\t"+card.Name+"\t"+card.Color+"\t"+card.Type+"\t"+card.Cost+"\n");
 				}
-			response.end();
-		} else
-		{
-			response.writeHead(200, {"Content-Type": "text/plain"});
-			response.end("You have already joined the draft !");
-		}	
-	}
-};
+			}
+		}
+	};
+	this.assignpacks(s,c);
+}
 
 function makePacks(packs) {
 	shuffle(cardList);
