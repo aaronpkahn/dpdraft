@@ -1,35 +1,29 @@
 var cardList = require("./public/js/cardList.js").cardList;
 
-var draft = function(n, p, s, c){
+var Draft = function(n, p, c, s){
 	this.name = n;
 	this.players = p;
-	this.packs = [];
-	//assign packs
-	this.assignpacks = function(packsize,packcount){
-		//makePacks(//TODO: aaron you are here
-		for(k in this.players) {
-			this.players.packs = [];
-			for(var i = 0; i < packcount; i+=1) {
-				this.player.packs.push(
-				for(var j = 0; j < packsize; j+=1)
-				{
-					var card = this.packs[i*playercount][j];
-				}
-			}
+	this.packs = []; //2 dim array
+	
+	this.assignpacks = function(packcount, packsize){
+		this.packs = []; //clear packs
+		makePacks(this.packs, packcount, packsize); //pass packs by reference to be updated by makePacks
+		for(var i = 0; i < this.players.length; i++) {
+			this.players[i].packs = this.packs.slice(i*packcount, (i+1)*packcount);
 		}
 	};
-	this.assignpacks(s,c);
+	this.assignpacks(c, s);
 }
 
-function makePacks(packs) {
+function makePacks(packs, packcount, packsize) {
 	shuffle(cardList);
-	for(var i = 0; i < (cardList.length/packsize)|0; packs[i]=[], i+=1);
-	for(var i = 0; i < cardList.length-cardList.length%packsize; i+=1)
-		packs[(i/packsize)|0][i%packsize]=cardList[i];
+	for(var i = 0; i < (cardList.length/packsize)|0; packs[i]=[], i+=1); //create each pack
+	for(var i = 0; i < cardList.length-cardList.length%packsize; i+=1) //loop through all the cards
+		packs[(i/packsize)|0][i%packsize]=cardList[i]; //assign each card to a pack
 }
 
 function shuffle(a){
 	for(var j, x, i = a.length; i; j = parseInt(Math.random() * i), x = a[--i], a[i] = a[j], a[j] = x);
 }
 
-exports.draft = draft;
+exports.Draft = Draft;
