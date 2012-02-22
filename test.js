@@ -1,5 +1,6 @@
-//var algo = require('./algorithms.js');
-var Draft = require('./draft.js').Draft;
+var algo = require('./algorithms.js');
+console.log(algo.SHA1('test'));
+/* var Draft = require('./draft.js').Draft;
 
 var players = [{name:'jim'},{name:'tom'},{name:'bob'}];
 var draft = new Draft('drafttest', players, 3, 14);
@@ -12,7 +13,7 @@ for(p in draft.players[1].packs){
 		console.log(pack[c]); //print card
 	}
 }
-
+ */
 // console.log(draft.players);
 
 // var strang = '/ok sweet dude';
