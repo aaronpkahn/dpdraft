@@ -40,12 +40,20 @@ $(document).ready(function () {
 		,receivePacks : function(packs) {
 			$('#log').prepend('<span class="logmsg">joined draft '+packs.length+' packs</span><br/>');
 			$('#packs').html('');
+			//var packs = toObject(ps,'pack');
 			for(p in packs){
 				var cardlist = [];
 				for(c in packs[p]){
 					cardlist.push(packs[p][c].Name);
 				}
-				$('#packs').append('<div id="pack'+p+'" class="pack" onclick="alert(\''+cardlist.join(', ')+'\');">&nbsp;___<br/>| '+p+' |<br/>|___|</div>');
+				var txt = '<div id="dpack'+p+'" title="Pack '+p+'"><p>'+cardlist.join(', ')+'</p></div>';
+				$('#container').prepend(txt);
+				$('#dpack'+p).dialog({autoOpen:false});
+				$('#packs').append('<div id="pack'+p+'" class="pack" >&nbsp;___<br/>| '+p+' |<br/>|___|</div>');
+				$('#pack'+p).click(function(sender){
+					var pid = sender.currentTarget.id;
+					$('#d'+pid).dialog('open');
+				});
 			}
 		}
 	}).connect(function (s) {
@@ -107,5 +115,11 @@ $(document).ready(function () {
 		retStr = retStr.replace(/microsoft/ig, 'm$');
 		retStr = retStr.replace(/lol/ig, '101');		
 		return retStr;
+	}
+	function toObject(arr,key) {
+		var rv = {};
+		for (var i in arr)
+			rv[(key?key:'')+i] = arr[i];
+		return rv;
 	}
 });
