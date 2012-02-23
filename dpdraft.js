@@ -3,6 +3,7 @@ var express = require('express');
 var app = express.createServer();
 app.configure(function() {
 	app.use('/public', express.static(__dirname + '/public/'));
+   app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 app.get('/', function(req, res) {
@@ -14,7 +15,7 @@ console.log('http://localhost:80/');
 //initialize dnode
 var players = {};
 var dnode = require('dnode');
-var commands = require('./commands').commands;
+var commands =  require('./commands').commands;
 var algo = require('./algorithms');
 var server = dnode(function(player, conn) {
 	// conn.on('ready', function() {
@@ -30,6 +31,10 @@ var server = dnode(function(player, conn) {
 		}
 	});
 	this.login = function(name,cb) {
+		if(!name.match('^[a-zA-Z0-9]*$')) {
+			cb('invalid characters, enter new name');
+			return;
+		}
 		if(name in players) {
 			cb(name+' is taken, enter new name');
 			return;
@@ -45,6 +50,11 @@ var server = dnode(function(player, conn) {
 		cb();
 	};
 	this.say = function (text, cb) {
+		if(!player.name){ //catch players that haven't logged in
+			player.logout();
+			return;
+		}
+		
 		if(text.length > 1 && text.indexOf('/') == 0) {
 			//command
 			var c = algo.parseCommand(text);
@@ -59,6 +69,7 @@ var server = dnode(function(player, conn) {
 			}
 		} else {
 			//chat
+			//text = escape(text);
 			for(p in players) {
 				players[p].hear(player.name,text);
 			}

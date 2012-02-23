@@ -6,10 +6,13 @@
 <link href="/public/css/style.css" rel="stylesheet" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="/dnode.js" type="text/javascript"></script>
+<script src="/public/js/index.js" type="text/javascript"></script>
 </head>
 <body>
 <h1>dpdraft</h1>
 	<div id="container">
+		<div id="packs"></div>
+		<br /><br />
 		<div id="login">
 			<input type="text" id="name" placeholder="enter your stinky name" />
 		</div>
@@ -23,96 +26,4 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript">
-$(document).ready(function () {
-	$('#login').hide();
-	$('#chat').hide();
-	$('#loading').show();
-	
-	//setup server connection
-	var server;
-	var client; 
-	DNode({
-		raiseError	: function (m) {
-			$('#log').prepend('<span class="error">'+m+'</span><br/>');
-		}
-		,log	: function (m) {
-			$('#log').prepend('<span class="logmsg">'+m+'</span><br/>');
-		}
-		,hear	: function (n,m) {
-			$('#log').prepend('<b>'+n+':</b> '+m+'<br/>');
-		}
-	}).connect(function (s) {
-		server = s;
-		client = this;
-		showLogin();
-	});
-	
-	function showLogin() {
-		$('#loading').hide();
-		$('#login').show();
-		$('#chat').hide();
-		$('#name').val('');
-	}
-	
-	function showLoginError(msg){
-		$('#loading').hide();
-		$('#login').show();
-		$('#name').val('');
-		$('#name').attr('placeholder', msg);
-	}
-	
-	$('#name').keydown(function(e) {
-		if((e.keyCode || e.charCode) === 13 && $('#name').val()) {
-			var name = $('#name').val();
-			if(name.indexOf(' ') >=0 ) {
-				showLoginError('enter a name without spaces');
-				return;
-			}
-			$('#login').hide();
-			$('#loading').show();
-			server.login(name,function(error){
-				if(error){
-					showLoginError(error);
-				} else {
-					client.name = name;
-					$('#loading').hide();
-					$('#chat').show();
-					$('#chatinput').focus();
-				}
-			}); //just a callback
-		}
-	});
-	var inputBuffer = [];
-	var currentIndex = -1;
-	$('#chatinput').keydown(function(e) {
-		if((e.keyCode || e.charCode) === 38) {
-			//up
-			if(inputBuffer.length-1>currentIndex){
-				$('#chatinput').val(inputBuffer[++currentIndex]);
-			}
-		} else if((e.keyCode || e.charCode) === 40) {
-			//down
-			if(currentIndex>0){
-				$('#chatinput').val(inputBuffer[--currentIndex]);
-			}
-		}
-		else if((e.keyCode || e.charCode) === 13) {
-			//enter
-			currentindex = -1;
-			inputBuffer.splice(0,0, $('#chatinput').val());
-			server.say(fixStr($('#chatinput').val())); //no callback
-			$('#chatinput').val('');
-		}
-	});
-	function fixStr(str){
-		var retStr = str.replace(/google/i, 'bing');
-		retStr = retStr.replace(/apple/i, 'google');
-		retStr = retStr.replace(/microsoft/i, 'm$');
-		retStr = retStr.replace(/lol/i, '101');		
-		return retStr;
-	}
-	
-});
-</script>
 </html>

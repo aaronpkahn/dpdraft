@@ -1,10 +1,17 @@
+var algo = require('./algorithms');
+var Draft = require('./draft').Draft;
+
 exports.commands = {
 	sweet		: function(cb) {
 		cb('sweet exectued *sp');
 	}
-	,draft	: function(cb,args) {
+	,draft	: function(cb,args,players) {
 		if(args.length > 0) {
-			cb('draft '+args[0]+' created');
+			cb('draft '+args[0]+' created for '+Object.keys(players).length+' players');
+			draft = new Draft(args[0], players, 3, 14);
+			for(p in players){
+				players[p].receivePacks(draft.players[p].packs);
+			}
 		} else {
 			cb('','draft command requires a name argument');
 		}
@@ -31,7 +38,18 @@ exports.commands = {
 					cb('','list argument '+args[0]+' not recognized');
 			}
 		} else {
-			cb('','list requires object name arguement');
+			cb('','list requires object name argument');
+		}
+	}
+	,kick		: function(cb,args,players) {
+		if(args.length > 1 
+		&& args[0] && args[0] in players 
+		&& algo.SHA1(args[1]) == '1f7d9766cbcb5f42e41784c98cb05c14401b4b19'){
+			players[args[0]].logout();
+			delete players[args[0]];
+			cb('gtfo '+args[0]+' you just got kicked');
+		} else {
+			cb('','kick requires playername and password');
 		}
 	}
 };

@@ -12,6 +12,13 @@ body{
 #name, #chatinput {
 	width: 300px;
 }
+.pack {
+	float:left;
+}
+#packs { 
+	font-family:monospace;
+	margin-bottom: 20px;
+}
 #log {
 	font-size: 1em; 
 	font-family: monaco, monospace;

@@ -5,14 +5,16 @@ var Draft = function(n, p, c, s){
 	this.players = p;
 	this.packs = []; //2 dim array
 	
-	this.assignpacks = function(packcount, packsize){
+	this.assignPacks = function(packcount, packsize){
 		this.packs = []; //clear packs
 		makePacks(this.packs, packcount, packsize); //pass packs by reference to be updated by makePacks
-		for(var i = 0; i < this.players.length; i++) {
-			this.players[i].packs = this.packs.slice(i*packcount, (i+1)*packcount);
+		var i = 0;
+		for(p in this.players) {
+			this.players[p].packs = this.packs.slice(i*packcount, (i+1)*packcount);
+			i++;
 		}
 	};
-	this.assignpacks(c, s);
+	this.assignPacks(c, s);
 }
 
 function makePacks(packs, packcount, packsize) {
