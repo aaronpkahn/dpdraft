@@ -41,15 +41,11 @@ $(document).ready(function () {
 			$('#log').prepend('<span class="logmsg">joined draft '+packs.length+' packs</span><br/>');
 			$('#packs').html('');
 			for(p in packs){
-				$('#packs').append('<div id="pack'+p+'" class="pack">&nbsp;___<br/>| '+p+' |<br/>|___|</div>');
 				var cardlist = [];
 				for(c in packs[p]){
 					cardlist.push(packs[p][c].Name);
 				}
-				var packtext = 'pack '+p+': '+cardlist.join(', ');
-				$('#pack'+p).click(function(){
-					alert(packtext);					
-				});
+				$('#packs').append('<div id="pack'+p+'" class="pack" onclick="alert(\''+cardlist.join(', ')+'\');">&nbsp;___<br/>| '+p+' |<br/>|___|</div>');
 			}
 		}
 	}).connect(function (s) {
