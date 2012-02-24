@@ -4,12 +4,13 @@
   , "contributors": [
         { "name": "kouri", "email": "kouri@kouri.org" }
 	 ] 
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "private": true
-  , "dependencies": {
-      "express"	: ">=2.5.6"
-	 , "jqtpl"		: ">=1.0.9"
-	 , "mongodb"	: ">=0.9.8-7"
-	 , "dnode"		: ">=0.9.6"
+  , "dependencies"	: {
+      "express"		: ">=2.5.6"
+	 , "jqtpl"			: ">=1.0.9"
+	 , "mongodb"		: ">=0.9.8-7"
+	 , "dnode"			: ">=0.9.6"
+	 , "nodester-cli"	: ">=0.2.37"
   }
 }
