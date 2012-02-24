@@ -7,10 +7,11 @@ app.configure(function() {
    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 app.get('/', function(req, res) {
-	res.redirect('/public/index.html');
+	res.sendfile(__dirname + '/public/index.html');
 });
-app.listen(14833);
-console.log('http://localhost:80/');
+var port = 14833
+app.listen(port);
+console.log('http://localhost:'+port+'/');
 
 //initialize dnode
 var players = {};
