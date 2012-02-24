@@ -9,7 +9,7 @@ app.configure(function() {
 app.get('/', function(req, res) {
 	res.redirect('/public/index.html');
 });
-app.listen(80);
+app.listen(14833);
 console.log('http://localhost:80/');
 
 //initialize dnode

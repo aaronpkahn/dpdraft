@@ -1,0 +1,4 @@
+[35mnodester[39m [37minfo[39m Gathering information about: dpdraft
+[35mnodester[39m [33mwarn[39m dpdraft on port 14833 running: [1m[31mfalse[39m[22m (pid: unknown)
+[35mnodester[39m [37minfo[39m gitrepo: git@nodester.com:/node/git/renobeguh/6680-5616137b49ce7c729d27000a619a8081.git
+[35mnodester[39m [37minfo[39m appfile: dpdraft.js
