@@ -6,6 +6,8 @@ function GUID()
 {
 	return (Hexa4()+Hexa4()+Hexa4()+Hexa4()+Hexa4()+Hexa4()+Hexa4()+Hexa4()).toUpperCase();
 }
+exports.GUID = GUID;
+
 function parseCommand(text) {
 	//TODO: add extra whitespace parsing
 	var i = text.indexOf(' ');
@@ -20,8 +22,15 @@ function parseCommand(text) {
 		,args		: []		
 	};
 }
-exports.GUID = GUID;
 exports.parseCommand = parseCommand;
+
+function toObject(arr,key) {
+	var rv = {};
+	for (var i in arr)
+		rv[(key?key:'')+i] = arr[i];
+	return rv;
+}
+exports.toObject = toObject;
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /*  SHA-1 implementation in JavaScript | (c) Chris Veness 2002-2010 | www.movable-type.co.uk      */

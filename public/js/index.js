@@ -1,25 +1,14 @@
 $(document).ready(function () {
-	function showLoading() {
-		$('#login').hide();
-		$('#chat').hide();
-		$('#loading').show();
-	}
-	function showLogin(msg) {
-		$('#loading').hide();
-		$('#chat').hide();
-		$('#name').val('');
-		$('#login').show();
-		if(msg){
-			$('#name').attr('placeholder', msg);
-		}
-	}
-	function showChat() {
-		$('#loading').hide();
-		$('#chat').show();
-		$('#chatinput').focus();
-	}
-	showLoading();
 	
+	showLoading();
+	var templates = {
+		'pack':'/public/tmpl/pack.tmpl.html'
+		//,'other':'/public/test2.tmpl.html'
+	};
+	loadTemplates(templates); //calls finishLoading() once all templates are loaded
+});
+	
+function finishLoading() {
 	//setup server connection
 	var server;
 	var client; 
@@ -40,7 +29,6 @@ $(document).ready(function () {
 		,receivePacks : function(packs) {
 			$('#log').prepend('<span class="logmsg">joined draft '+packs.length+' packs</span><br/>');
 			$('#packs').html('');
-			//var packs = toObject(ps,'pack');
 			for(p in packs){
 				var cardlist = [];
 				for(c in packs[p]){
@@ -49,7 +37,8 @@ $(document).ready(function () {
 				var txt = '<div id="dpack'+p+'" title="Pack '+p+'"><p>'+cardlist.join(', ')+'</p></div>';
 				$('#container').prepend(txt);
 				$('#dpack'+p).dialog({autoOpen:false});
-				$('#packs').append('<div id="pack'+p+'" class="pack" >&nbsp;___<br/>| '+p+' |<br/>|___|</div>');
+				$.tmpl('pack', {id:p}).appendTo('#packs');
+				//.append('<div id="pack'+p+'" class="pack" >&nbsp;___<br/>| '+p+' |<br/>|___|</div>');
 				$('#pack'+p).click(function(sender){
 					var pid = sender.currentTarget.id;
 					$('#d'+pid).dialog('open');
@@ -116,10 +105,53 @@ $(document).ready(function () {
 		retStr = retStr.replace(/lol/ig, '101');		
 		return retStr;
 	}
-	function toObject(arr,key) {
-		var rv = {};
-		for (var i in arr)
-			rv[(key?key:'')+i] = arr[i];
-		return rv;
+}
+
+function loadTemplates(templates){
+	var templateCount = Object.keys(templates).length;
+	var loadedCount = 0;
+	for(t in templates) {
+		loadTemplate(t, templates[t], function() { 
+			loadedCount += 1;
+			if(loadedCount == templateCount) {
+				finishLoading();
+			}
+		});
 	}
-});
+}
+
+function loadTemplate(name, templateUrl, cb) { //this may be called by loadTemplates at the first page load, or later
+	$.ajax({
+		url:templateUrl
+		,success: function(template) {
+			$.template(name, template);
+			cb();
+		}
+		,error: function(jqXHR, textStatus, errorThrown) {
+			showError(textStatus+errorThrown);
+		}
+	});
+}
+
+function showError(msg) {
+	$('#container').prepend('<div id="error" class="error">'+msg+'</div>');
+}
+function showLoading() {
+	$('#login').hide();
+	$('#chat').hide();
+	$('#loading').show();
+}
+function showLogin(msg) {
+	$('#loading').hide();
+	$('#chat').hide();
+	$('#name').val('');
+	$('#login').show();
+	if(msg){
+		$('#name').attr('placeholder', msg);
+	}
+}
+function showChat() {
+	$('#loading').hide();
+	$('#chat').show();
+	$('#chatinput').focus();
+}
