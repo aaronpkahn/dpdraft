@@ -1,4 +1,4 @@
-[
+exports.cardList = [
 	{
 		"Name": "Force of Will",
 		"Color": "U",
