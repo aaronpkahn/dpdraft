@@ -1,3 +1,8 @@
+//TODO: use event emitters for all player broadcasting
+//TODO: change all for in loops to forEach Ex.:
+	// Object.keys(myobject).forEach(function(key){
+	  // myobject[key];
+	// });
 var algo = require('./algorithms');
 var Draft = require('./draft').Draft;
 
@@ -8,21 +13,21 @@ exports.commands = {
 	,draft	: function(cb,args,players) {
 		if(args.length > 0) {
 			cb('draft '+args[0]+' created for '+Object.keys(players).length+' players');
-			draft = new Draft(args[0], players, 3, 14);
-			for(p in players){
-				players[p].receivePacks(draft.players[p].packs);
+			var draft1 = new Draft(args[0], players, 3, 14);
+			for(var p in players){
+				players[p].receivePacks(draft1.players[p].packs);
 			}
 		} else {
 			cb('','draft command requires a name argument');
 		}
 	}
 	,pen15	: function(cb,args,players) {
-		for(p in players){
+		for(var p in players){
 			players[p].log('<marquee behavior=scroll direction=right>8====D '+args.join(' ')+'</marquee>');
 		}
 	}
 	,dong		: function(cb,args,players) {
-		for(p in players) {
+		for(var p in players) {
 			players[p].log('<pre>'+args.join(' ')+'<br>      ___<br>     //  7<br>    (_,_/\\<br>     \\    \\<br>      \\    \\<br>      _\\    \\__<br>     (   \\     )<br>      \\___\\___/</pre>');
 		}
 	}
@@ -31,7 +36,7 @@ exports.commands = {
 			switch(args[0]){
 				case 'players':
 					var playerList = [];
-					for(p in players) playerList.push(players[p].name);
+					for(var p in players) playerList.push(players[p].name);
 					cb(playerList.join(', '));
 					break;
 				default:

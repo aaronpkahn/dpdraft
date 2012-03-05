@@ -1,15 +1,15 @@
 // initialize express
+var port = 14833;
 var express = require('express');
 var app = express.createServer();
-app.configure(function() {
+app.configure(function () {
 	app.use('/public', express.static(__dirname + '/public/'));
-   app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
-   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+	app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
+	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/public/index.html');
 });
-var port = 14833
 app.listen(port);
 console.log('http://localhost:'+port+'/');
 
@@ -22,11 +22,11 @@ var server = dnode(function(player, conn) {
 	// conn.on('ready', function() {
 	// });
 	conn.on('end', function () {
-		if(player.name && player.name in players) {
+		if(player.name && players.hasOwnProperty('name')) {
 			var disconnectText = player.name + ' disconnected';
 			console.log(conn.id+': '+disconnectText);
-			delete players[player.name]
-			for(p in players) {
+			delete players[player.name];
+			for(var p in players) {
 				players[p].log(disconnectText);
 			}
 		}
@@ -43,7 +43,7 @@ var server = dnode(function(player, conn) {
 		player.name = name;
 		var connectionText = player.name+' connected';
 		console.log(conn.id+': '+connectionText);
-		for(p in players) {
+		for(var p in players) {
 			players[p].log(connectionText);
 		}
 		//player.GUID = algo.GUID();
@@ -71,7 +71,7 @@ var server = dnode(function(player, conn) {
 		} else {
 			//chat
 			//text = escape(text);
-			for(p in players) {
+			for(var p in players) {
 				players[p].hear(player.name,text);
 			}
 		}

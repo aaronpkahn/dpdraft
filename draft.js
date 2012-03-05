@@ -1,4 +1,6 @@
-var cardList = require("./public/js/cardList.js").cardList;
+var fs = require('fs');
+var cardList = JSON.parse(fs.readFileSync(__dirname+'/public/js/cardList.js', 'utf8'));
+
 
 var Draft = function(n, p, c, s){
 	this.name = n;
