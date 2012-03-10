@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ><!--manifest="timepunch.manifest"-->
+	<head>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<title>SC Time Punch</title>
+		<script src="/public/jquery.min.js"></script>
+		<script src="/public/client.js"></script>
+		<!--<link rel="stylesheet" href="/public/style.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">-->
+		<link rel="stylesheet" type="text/css" href="/public/mobile.css" media="only screen and (max-width: 480px)" />
+		<link rel="stylesheet" type="text/css" href="/public/desktop.css" media="screen and (min-width: 481px)" />
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="ie.css" media="all" />
+		<![endif]-->
+	</head>
+<body valign="top">
+<div id="container">
+	<h1 id="navhome"><!--<div id="menubutton">Menu</div>-->Time Punch</h1>
+	<div id="navPanel">
+		<ul>
+			<li id="navpunch">Punch In</li>
+			<li id="navlog">View Log</li>
+			<li id="navdevelopment">Development</li>
+		</ul>
+	</div>
+	<div id="punchPanel">
+		<div>Select Job: <input type="text" id="tbJob"/></div>
+		<div>Select Task: <input type="text" id="tbJob"/></div>
+		<div id="buttons">
+			<input type="button" id="btnPunchIn" value="Punch In" />
+		</div>
+	</div>
+	<div id="logPanel">
+		
+	</div>
+</div>
+</body>
+</html>
