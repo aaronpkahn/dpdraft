@@ -10,6 +10,20 @@ app.configure(function () {
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/public/index.html');
 });
+app.get('/api/test',function(req, res) {
+	res.send(JSON.stringify({error:'', result:'get successful'}));
+});
+app.post('/api/test',function(req, res) {
+	res.send(JSON.stringify({error:'', result:'post successful'}));
+});
+app.put('/api/test',function(req, res) {
+	res.send(JSON.stringify({error:'', result:'put successful'}));
+});
+app.del('/api/test',function(req, res) {
+	res.send(JSON.stringify({error:'', result:'delete successful'}));
+});
+
+
 app.listen(port);
 console.log('http://localhost:'+port+'/');
 
