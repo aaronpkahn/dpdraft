@@ -15,9 +15,12 @@ app.get('/api/test',function(req, res) {
 	var ip_address;
 	try {
 		ip_address = req.connection.remoteAddress;
-	}
-	for(var p in players) {
-		players[p].hear('drupal:','ip-'+ip_address);
+		for(var p in players) {
+			players[p].hear('drupal:','ip-'+ip_address);
+		}
+	} catch(error)
+	{
+		console.log(error);
 	}
 	res.send(JSON.stringify({error:'', result:'get successful'}));
 });
