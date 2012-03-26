@@ -1,6 +1,7 @@
 // initialize express
 var port = 14833;
 var express = require('express');
+var players = {};
 var app = express.createServer();
 app.configure(function () {
 	app.use('/public', express.static(__dirname + '/public/'));
@@ -11,6 +12,13 @@ app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/public/index.html');
 });
 app.get('/api/test',function(req, res) {
+	var ip_address;
+	try {
+		ip_address = req.connection.remoteAddress;
+	}
+	for(var p in players) {
+		players[p].hear('drupal:','ip-'+ip_address);
+	}
 	res.send(JSON.stringify({error:'', result:'get successful'}));
 });
 app.post('/api/test',function(req, res) {
@@ -28,7 +36,6 @@ app.listen(port);
 console.log('http://localhost:'+port+'/');
 
 //initialize dnode
-var players = {};
 var dnode = require('dnode');
 var commands =  require('./commands').commands;
 var algo = require('./algorithms');
