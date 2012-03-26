@@ -31,6 +31,11 @@ exports.commands = {
 			players[p].log('<pre>'+args.join(' ')+'<br>      ___<br>     //  7<br>    (_,_/\\<br>     \\    \\<br>      \\    \\<br>      _\\    \\__<br>     (   \\     )<br>      \\___\\___/</pre>');
 		}
 	}
+	,tron		: function(cb,args,players) {
+		for(var p in players) {
+			players[p].tron();
+		}
+	}
 	,list		: function(cb,args,players) {
 		if(args.length > 0) {
 			switch(args[0]){

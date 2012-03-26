@@ -45,6 +45,9 @@ function finishLoading() {
 				});
 			}
 		}
+		,tron : function() {
+			window.open('/public/tron.html','tron','width=350,height=300,scrollbars=no');
+		}
 	}).connect(function (s) {
 		server = s;
 		client = this;
