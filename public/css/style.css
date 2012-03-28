@@ -19,9 +19,22 @@ body{
 	font-family:monospace;
 	margin-bottom: 20px;
 }
+#openpack {
+	height: 300px;
+}
+/*#chat{
+	background: #DDDDDD;
+	height: 75px;
+	position: fixed;
+	bottom: 10px;
+	z-index: 5;
+	padding-left:20px;
+}*/
 #log {
 	font-size: 1em; 
 	font-family: monaco, monospace;
+	height: 200px;
+	overflow: auto;
 }
 .error { color:red; }
 .logmsg{ color:#666666; font-weight:bold;}

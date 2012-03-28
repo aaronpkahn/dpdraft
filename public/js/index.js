@@ -66,14 +66,13 @@ function finishLoading() {
 				showLogin('enter a name with valid characters');
 				return;
 			}
-			$('#login').hide();
-			$('#loading').show();
+			showLoading();
 			server.login(name,function(error){
 				if(error){
 					showLogin(error);
 				} else {
 					client.name = name;
-					showChat();
+					showMain();
 				}
 			}); //just a callback
 		}
@@ -140,21 +139,19 @@ function showError(msg) {
 	$('#container').prepend('<div id="error" class="error">'+msg+'</div>');
 }
 function showLoading() {
-	$('#login').hide();
-	$('#chat').hide();
+	$('#container > div').hide();
 	$('#loading').show();
 }
 function showLogin(msg) {
-	$('#loading').hide();
-	$('#chat').hide();
-	$('#name').val('');
+	$('#container > div').hide();
 	$('#login').show();
+	$('#name').val('');
 	if(msg){
 		$('#name').attr('placeholder', msg);
 	}
 }
-function showChat() {
-	$('#loading').hide();
-	$('#chat').show();
+function showMain() {
+	$('#container > div').hide();
+	$('#main').show();
 	$('#chatinput').focus();
 }
