@@ -35,6 +35,9 @@ body{
 	font-family: monaco, monospace;
 	height: 200px;
 	overflow: auto;
+	border-top:4px solid #DDDDDD;
+	border-left:1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
 }
 .error { color:red; }
 .logmsg{ color:#666666; font-weight:bold;}

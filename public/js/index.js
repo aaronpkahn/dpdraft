@@ -7,27 +7,32 @@ $(document).ready(function () {
 	};
 	loadTemplates(templates); //calls finishLoading() once all templates are loaded
 });
-	
+
+function appendToLog(msg) {
+	$('#log').append(msg);
+	$('#log').scrollTop($('#log')[0].scrollHeight);
+}
+
 function finishLoading() {
 	//setup server connection
 	var server;
 	var client; 
 	DNode({
 		raiseError	: function (m) {
-			$('#log').prepend('<span class="error">'+m+'</span><br/>');
+			appendToLog('<span class="error">'+m+'</span><br/>');
 		}
 		,log	: function (m) {
-			$('#log').prepend('<span class="logmsg">'+m+'</span><br/>');
+			appendToLog('<span class="logmsg">'+m+'</span><br/>');
 		}
 		,hear	: function (n,m) {
 			m = m.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-			$('#log').prepend('<b>'+n+':</b> '+m+'<br />');
+			appendToLog('<b>'+n+':</b> '+m+'<br />');
 		}
 		,logout : function() {
 			showLogin('logged out... enter name');
 		}
 		,receivePacks : function(packs) {
-			$('#log').prepend('<span class="logmsg">joined draft '+packs.length+' packs</span><br/>');
+			appendToLog('<span class="logmsg">joined draft '+packs.length+' packs</span><br/>');
 			$('#packs').html('');
 			for(p in packs){
 				var cardlist = [];
