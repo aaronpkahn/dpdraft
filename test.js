@@ -1,28 +1,29 @@
-var a = 2;
+// var a = 2;
 
-var str ='test(2) abc (3)';
-str = str.replace(/\([0-9]\)/g,'');
-str = str.replace(/\s+$/,'');
-console.log(str);
-console.log(str.length);
+// var str ='test(2) abc (3)';
+// str = str.replace(/\([0-9]\)/g,'');
+// str = str.replace(/\s+$/,'');
+// console.log(str);
+// console.log(str.length);
 //var algo = require('./algorithms.js');
 
-// var Draft = require('./draft.js').Draft;
+/*Start CardPicker unit Test*/
 
-// var players = [{name:'jim'},{name:'tom'},{name:'bob'}];
-// var draft = new Draft('drafttest', players, 3, 14);
+var Draft = require('./draft.js').Draft;
+
+
+ var players = [{name:'jim'},{name:'tom'},{name:'bob'}];
+ var draft = new Draft('drafttest', players, 3, 14);
 
 // // check out one player
 // //console.log(draft.players[0]
-// for(p in draft.players[1].packs){
-	// var pack = draft.players[1].packs[p];
-	// console.log('pack '+p);
-	// for(c in pack) {
-	// //	console.log(pack[c]); //print card
-	// }
-// }
-// console.log(draft.players);
+for(p in draft.players[1].packs){
+	var pack = draft.players[1].packs[p];
+	console.log('pack '+p);
+	for(c in pack) {
+	//	console.log(pack[c]); //print card
+	}
+}
+console.log(draft.players[2].packs[2]);
 
-// var strang = '/ok sweet dude';
-// console.log(algo.parseCommand(strang));
-//<div style="position:absolute; top:1px; left:1px; background-color:black; color:white; width:100px; height:100px;">html hacks</div>
+/*end CardPicker unit test*/

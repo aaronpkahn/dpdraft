@@ -13,9 +13,13 @@ exports.commands = {
 	,draft	: function(cb,args,players) {
 		if(args.length > 0) {
 			cb('draft '+args[0]+' created for '+Object.keys(players).length+' players');
-			var draft1 = new Draft(args[0], players, 3, 14);
-			for(var p in players){
-				players[p].receivePacks(draft1.players[p].packs);
+			var playerArray = [];
+			for (var p in players) {
+				playerArray.push(players[p]);
+			}
+			var draft1 = new Draft(args[0], playerArray, 3, 14);
+			for(p in playerArray){
+				playerArray[p].receivePacks(draft1.playerArray[p].packs);
 			}
 		} else {
 			cb('','draft command requires a name argument');
@@ -28,7 +32,7 @@ exports.commands = {
 	}
 	,dong		: function(cb,args,players) {
 		for(var p in players) {
-			players[p].log('<pre>'+args.join(' ')+'<br>      ___<br>     //  7<br>    (_,_/\\<br>     \\    \\<br>      \\    \\<br>      _\\    \\__<br>     (   \\     )<br>      \\___\\___/</pre>');
+			players[p].log('<pre>      ___<br>     //  7<br>    (_,_/\\<br>     \\    \\<br>      \\    \\<br>      _\\    \\__<br>     (   \\     )<br>      \\___\\___/</pre>');
 		}
 	}
 	,tron		: function(cb,args,players) {

@@ -46,7 +46,7 @@ var server = dnode(function(player, conn) {
 	// conn.on('ready', function() {
 	// });
 	conn.on('end', function () {
-		if(player.name && players.hasOwnProperty('name')) {
+		if(player.name && players.hasOwnProperty(player.name)) {
 			var disconnectText = player.name + ' disconnected';
 			console.log(conn.id+': '+disconnectText);
 			delete players[player.name];
