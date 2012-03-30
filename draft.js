@@ -21,7 +21,7 @@ function makePacks(packcount, packsize) {
 	var colorBuckets = {};
 	//setup bucket for each color
 	for (var x in cardList) {
-		if(colorBuckets.hasOwnProperty(cardList[x].Color)) {
+		if(cardList[x].Color in colorBuckets) {
 			colorBuckets[cardList[x].Color].push(cardList[x]); //add card to bucket
 		} else {
 		 	colorBuckets[cardList[x].Color] = [cardList[x]]; //initialize bucket to new array with card
