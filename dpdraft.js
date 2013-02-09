@@ -8,6 +8,9 @@ app.configure(function () {
 	app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
+app.get('/google4c9586b693d4cf5b.html', function(req,res) {
+	res.sendfile(__dirname + '/public/google4c9586b693d4cf5b.html');
+});
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/public/index.html');
 });
