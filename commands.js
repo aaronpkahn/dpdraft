@@ -10,7 +10,7 @@ exports.commands = {
 	sweet		: function(cb) {
 		cb('sweet exectued *sp');
 	}
-	,draft	: function(cb,args,players) {
+	,draft		: function(cb,args,players) {
 		if(args.length > 0) {
 			cb('draft '+args[0]+' created for '+Object.keys(players).length+' players');
 			var playerArray = [];
@@ -25,7 +25,7 @@ exports.commands = {
 			cb('','draft command requires a name argument');
 		}
 	}
-	,pen15	: function(cb,args,players) {
+	,pen15		: function(cb,args,players) {
 		for(var p in players){
 			players[p].log('<marquee behavior=scroll direction=right>8====D '+args.join(' ')+'</marquee>');
 		}

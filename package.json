@@ -7,10 +7,9 @@
   , "version": "0.0.2"
   , "private": true
   , "dependencies"	: {
-      "express"		: ">=2.5.6"
+      "express"			: "<=2.9.9"
 	 , "jqtpl"			: ">=1.0.9"
-	 , "mongodb"		: ">=0.9.8-7"
-	 , "dnode"			: ">=0.9.6"
-	 , "nodester-cli"	: ">=0.2.37"
-  }
+	 , "dnode"			: "0.9.6"
+	 , "everyauth"		: ">=0.3.1"
+	 }
 }

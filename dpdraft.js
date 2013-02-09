@@ -2,8 +2,28 @@
 var port = 14833;
 var express = require('express');
 var players = {};
+
+//setup google auth
+var everyauth = require('everyauth');
+everyauth.google
+	.appId('dpdraft.nodester.com')
+	.appSecret('TV-ot6hX9mTvvYqwxp-kjGUH')
+	.scope('https://www.googleapis.com/auth/userinfo.profile') // What you want access to
+	.handleAuthCallbackError( function (req, res) {
+		console.log('authcallbackerror !');
+	})
+	.findOrCreateUser( function (session, accessToken, accessTokenExtra, googleUserMetadata) {
+		console.log('token:'+accessToken);
+		console.log(googleUserMetadata);
+	})
+	.redirectPath('/');
+
 var app = express.createServer();
 app.configure(function () {
+	app.use(express.bodyParser());
+	app.use(express.cookieParser());
+	app.use(everyauth.middleware());
+	app.use(express.session({ secret: 'foobar' }));
 	app.use('/public', express.static(__dirname + '/public/'));
 	app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
@@ -12,7 +32,12 @@ app.get('/google4c9586b693d4cf5b.html', function(req,res) {
 	res.sendfile(__dirname + '/public/google4c9586b693d4cf5b.html');
 });
 app.get('/', function(req, res) {
-	res.sendfile(__dirname + '/public/index.html');
+	if(req.session.auth && req.session.auth.loggedIn){
+		res.sendfile(__dirname + '/public/index.html');
+	} else {
+		res.sendfile(__dirname + '/public/auth.html');
+	}
+
 });
 app.get('/api/test',function(req, res) {
 	var ip_address;
@@ -36,7 +61,6 @@ app.put('/api/test',function(req, res) {
 app.del('/api/test',function(req, res) {
 	res.send(JSON.stringify({error:'', result:'delete successful'}));
 });
-
 
 app.listen(port);
 console.log('http://localhost:'+port+'/');
