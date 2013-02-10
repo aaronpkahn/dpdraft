@@ -13,25 +13,25 @@ function appendToLog(msg) {
 	$('#log').scrollTop($('#log')[0].scrollHeight);
 }
 
-function finishLoading() {
+function FinishLoading(sid) {
 	//setup server connection
 	var server;
 	var client; 
 	DNode({
-		raiseError	: function (m) {
+		raiseError : function (m) {
 			appendToLog('<span class="error">'+m+'</span><br/>');
 		}
-		,log	: function (m) {
+		,log : function (m) {
 			appendToLog('<span class="logmsg">'+m+'</span><br/>');
 		}
-		,hear	: function (n,m) {
+		,hear : function (n,m) {
 			m = m.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 			appendToLog('<b>'+n+':</b> '+m+'<br />');
 		}
 		,logout : function() {
 			showLogin('logged out... enter name');
 		}
-		,receivePacks : function(packs) {
+		,receivePacks 	: function(packs) {
 			appendToLog('<span class="logmsg">joined draft '+packs.length+' packs</span><br/>');
 			$('#packs').html('');
 			for(p in packs){
@@ -56,32 +56,35 @@ function finishLoading() {
 	}).connect(function (s) {
 		server = s;
 		client = this;
-		showLogin();
+		server.setupClient(sid, function(userInfo) {
+			$('#loginDetails').html(userInfo.name);
+			showMain();
+		});
 	});
 	
-	//login event
-	$('#name').keydown(function(e) {
-		if((e.keyCode || e.charCode) === 13 && $('#name').val()) {
-			var name = $('#name').val();
-			if(name.indexOf(' ') >=0 ) {
-				showLogin('enter a name without spaces');
-				return;
-			}
-			if(!name.match('^[a-zA-Z0-9]*$')) {
-				showLogin('enter a name with valid characters');
-				return;
-			}
-			showLoading();
-			server.login(name,function(error){
-				if(error){
-					showLogin(error);
-				} else {
-					client.name = name;
-					showMain();
-				}
-			}); //just a callback
-		}
-	});
+	// //login event no longer needed with oauth
+	// $('#name').keydown(function(e) {
+		// if((e.keyCode || e.charCode) === 13 && $('#name').val()) {
+			// var name = $('#name').val();
+			// if(name.indexOf(' ') >=0 ) {
+				// showLogin('enter a name without spaces');
+				// return;
+			// }
+			// if(!name.match('^[a-zA-Z0-9]*$')) {
+				// showLogin('enter a name with valid characters');
+				// return;
+			// }
+			// showLoading();
+			// server.login(name,function(error){
+				// if(error){
+					// showLogin(error);
+				// } else {
+					// client.name = name;
+					// showMain();
+				// }
+			// }); //just a callback
+		// }
+	// });
 	
 	//chat interaction
 	var inputBuffer = [];
@@ -121,10 +124,18 @@ function loadTemplates(templates){
 		loadTemplate(t, templates[t], function() { 
 			loadedCount += 1;
 			if(loadedCount == templateCount) {
-				finishLoading();
+				GetSession();
 			}
 		});
 	}
+}
+
+function GetSession(){
+	$.get('/sid'
+		,function(data){
+			FinishLoading(data);
+		}
+	);
 }
 
 function loadTemplate(name, templateUrl, cb) { //this may be called by loadTemplates at the first page load, or later
@@ -148,15 +159,17 @@ function showLoading() {
 	$('#loading').show();
 }
 function showLogin(msg) {
-	$('#container > div').hide();
-	$('#login').show();
-	$('#name').val('');
-	if(msg){
-		$('#name').attr('placeholder', msg);
-	}
+	//window.location = '/public/auth.html';
+	// $('#container > div').hide();
+	// $('#login').show();
+	// $('#name').val('');
+	// if(msg){
+		// $('#name').attr('placeholder', msg);
+	// }
 }
 function showMain() {
 	$('#container > div').hide();
 	$('#main').show();
 	$('#chatinput').focus();
+	$('#loading').hide();
 }

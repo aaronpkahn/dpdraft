@@ -4,12 +4,12 @@
   , "contributors": [
         { "name": "kouri", "email": "kouri@kouri.org" }
 	 ] 
-  , "version": "0.0.2"
+  , "version": "0.0.3"
   , "private": true
   , "dependencies"	: {
-      "express"			: "<=2.9.9"
+      "express"			: "<2.9.9"
 	 , "jqtpl"			: ">=1.0.9"
 	 , "dnode"			: "0.9.6"
-	 , "everyauth"		: ">=0.3.1"
+	 , "request"		: ">=2.12.0"
 	 }
 }
