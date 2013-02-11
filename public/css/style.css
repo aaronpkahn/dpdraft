@@ -1,5 +1,5 @@
 body{
-	font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+	font-family: "consolas";
 	font-size: 13px;
 	text-align: center;
 }
@@ -9,6 +9,13 @@ body{
 	width:300px;
 	margin: 0px auto -1px auto
 }
+
+.login {
+	position: absolute;
+	right: 100px;
+	top: 2px;
+}
+
 #name, #chatinput {
 	width: 300px;
 }
@@ -32,7 +39,7 @@ body{
 }*/
 #log {
 	font-size: 1em; 
-	font-family: monaco, monospace;
+	font-family: consolas;
 	height: 200px;
 	overflow: auto;
 	border-top:4px solid #DDDDDD;

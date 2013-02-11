@@ -86,6 +86,11 @@ function FinishLoading(sid) {
 		// }
 	// });
 	
+	$('#logout').click(function(e) {
+		e.preventDefault();
+		showLogin();
+	});
+	
 	//chat interaction
 	var inputBuffer = [];
 	var currentIndex = -1;
@@ -159,7 +164,7 @@ function showLoading() {
 	$('#loading').show();
 }
 function showLogin(msg) {
-	//window.location = '/public/auth.html';
+	window.location = '/public/auth.html';
 	// $('#container > div').hide();
 	// $('#login').show();
 	// $('#name').val('');
